@@ -13,9 +13,10 @@ Before you can use these images, you need the following tools installed:
 
 A list of all `devcontainers` currently being automatically build:
 
-| Name  | Runtime | Platform                     | Tag                                           |
-| ----- | ------- | ---------------------------- | --------------------------------------------- |
-| BunJS | alpine  | `linux/amd64`, `linux/arm64` | `ghcr.io/mhuzkhan/devcontainers/bunjs:latest` |
+| Name   | Runtime | Platform                     | Tag                                                |
+| ------ | ------- | ---------------------------- | -------------------------------------------------- |
+| BunJS  | alpine  | `linux/amd64`, `linux/arm64` | `ghcr.io/mhuzkhan/devcontainers/bunjs:latest`      |
+| NodeJS | alpine  | `linux/amd64`, `linux/arm64` | `ghcr.io/mhuzkhan/devcontainers/nodejs-lts:latest` |
 
 ## Getting Started
 
@@ -46,4 +47,4 @@ If you want more up-to-date images for `devcontainers`, please raise an issue an
 
 ### License
 
-This Repo is MIT Licensed
+This project is MIT Licensed
