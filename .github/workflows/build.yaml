@@ -1,4 +1,4 @@
-name: Build and Push Container Image (BunJS)
+name: Build and Push Container Image
 
 on:
   schedule:
@@ -12,6 +12,14 @@ env:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - dockerfile: ./Dockerfiles/bunjs.dockerfile
+            runtime: bunjs
+          - dockerfile: ./Dockerfiles/nodejs-lts.dockerfile
+            runtime: nodejs-lts
     permissions:
       contents: read
       packages: write
@@ -37,7 +45,7 @@ jobs:
       - name: Build and Push Container Image
         uses: docker/build-push-action@v5
         with:
-          file: ./Dockerfiles/bunjs.dockerfile
+          file: ${{ matrix.dockerfile }}
           push: true
-          tags: '${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}/bunjs:latest'
+          tags: '${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}/${{ matrix.runtime }}:latest'
           platforms: 'linux/amd64,linux/arm64'
