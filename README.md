@@ -11,7 +11,7 @@ Before you can use these images, you need the following tools installed:
 
 ## Current Images
 
-A list of all `devcontainers` currently being automatically being build:
+A list of all `devcontainers` currently being automatically build:
 
 | Name  | Runtime | Platform                     | Tag                                           |
 | ----- | ------- | ---------------------------- | --------------------------------------------- |
