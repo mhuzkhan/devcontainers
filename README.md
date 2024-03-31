@@ -27,14 +27,23 @@ To use any of the images provided, please follow these simple steps:
 4. Copy the following configuration into the `devcontainer.json` file:
 ```json
 {
-    "name": "MY AWESOME PROJECT",
+    "name": "BunJS",
     "image": "ghcr.io/mhuzkhan/devcontainers/bunjs:latest",
     "customizations": {
         "vscode": {
             "extensions": [
-                "dbaeumer.vscode-eslint"
+                "dbaeumer.vscode-eslint",
+                "oven.bun-vscode"
             ]
         }
     }
 }
 ```
+
+### Want more images?
+
+If you want more up-to-date images for `devcontainers`, please raise an issue and will try to include them.
+
+### License
+
+This Repo is MIT Licensed
