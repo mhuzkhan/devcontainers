@@ -36,5 +36,5 @@ jobs:
         with:
           file: ./Dockerfiles/bunjs.dockerfile
           push: true
-          tags: '${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}/bunjs:latest'
+          tags: '${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}/bunjs'
           platforms: 'linux/amd64,linux/arm64'
