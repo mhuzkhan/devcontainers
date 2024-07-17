@@ -15,6 +15,7 @@ jobs:
           package-name: 'nodejs-lts'
           package-type: 'container'
           min-versions-to-keep: 5
+          delete-only-untagged-versions: 'true'
           token: ${{ secrets.NUKE_TOKEN }}
       - name: Keep the latest 5 versions
         uses: actions/delete-package-versions@v5
@@ -22,4 +23,5 @@ jobs:
           package-name: 'bunjs'
           package-type: 'container'
           min-versions-to-keep: 5
+          delete-only-untagged-versions: 'true'
           token: ${{ secrets.NUKE_TOKEN }}
