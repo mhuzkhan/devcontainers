@@ -12,7 +12,7 @@ jobs:
       - name: Keep the latest 5 versions
         uses: actions/delete-package-versions@v5
         with:
-          package-name: 'nodejs-lts'
+          package-name: 'devcontainers/nodejs-lts'
           package-type: 'container'
           min-versions-to-keep: 5
           delete-only-untagged-versions: 'true'
@@ -20,7 +20,7 @@ jobs:
       - name: Keep the latest 5 versions
         uses: actions/delete-package-versions@v5
         with:
-          package-name: 'bunjs'
+          package-name: 'devcontainers/bunjs'
           package-type: 'container'
           min-versions-to-keep: 5
           delete-only-untagged-versions: 'true'
