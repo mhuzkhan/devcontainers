@@ -1,0 +1,25 @@
+name: Cleanup GH Container Registry
+
+on:
+    schedule:
+        - cron: 0 0 * * 1
+    workflow_dispatch:
+
+jobs:
+  house-keeping-nodejs-lts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Keep the latest 5 versions
+        uses: actions/delete-package-versions@v5
+        with:
+          package-name: 'nodejs-lts'
+          package-type: 'container'
+          min-versions-to-keep: 5
+          token: ${{ secrets.NUKE_TOKEN }}
+      - name: Keep the latest 5 versions
+        uses: actions/delete-package-versions@v5
+        with:
+          package-name: 'bunjs'
+          package-type: 'container'
+          min-versions-to-keep: 5
+          token: ${{ secrets.NUKE_TOKEN }}
